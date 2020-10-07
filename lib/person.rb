@@ -45,6 +45,49 @@ class Person
   end
 #why weren't we able to do the same code for clean? and happy?
 
+  def get_paid(salary)
+    @bank_account += salary
+    "all about the benjamins"
+  end
+
+  def take_bath
+    self.hygiene += 4
+    "♪ Rub-a-dub just relaxing in the tub ♫"
+  end
+
+  def work_out
+    self.happiness += 2
+    self.hygiene -= 3
+    "♪ another one bites the dust ♫"
+  end
+
+  def call_friend(friend_name)
+    self.happiness += 3
+    friend_name.happiness += 3
+    "Hi #{friend_name.name}! It's #{self.name}. How are you?"
+  end
+  #why did we need to do the `.name` for the friend?
+
+  def start_conversation(person, topic)
+    if topic == "politics"
+      person.happiness -= 2
+      self.happiness -= 2
+      "blah blah partisan blah lobbyist"
+    elsif topic == "weather"
+      person.happiness += 1
+      self.happiness += 1
+      "blah blah sun blah rain"
+    elsif topic != "weather" || "politics"
+      "blah blah blah blah blah"
+    end
+
+
+  end
+
+
+
+
+
 
 
 end
